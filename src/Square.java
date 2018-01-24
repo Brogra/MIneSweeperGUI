@@ -1,3 +1,5 @@
+import javax.swing.*;
+
 public class Square {
 
     private int Touching;
@@ -7,9 +9,10 @@ public class Square {
     private boolean Clicked;
     private boolean isMine;
     private boolean Test;
+    private JButton JBut;
 
 
-    public Square(int MinesTouching, int xCord, int yCord, boolean hide,boolean click,boolean mine,boolean tested){
+    public Square(int MinesTouching, int xCord, int yCord, boolean hide,boolean click,boolean mine,boolean tested, JButton place){
         Touching = MinesTouching;
         xLoc = xCord;
         yLoc = yCord;
@@ -17,6 +20,7 @@ public class Square {
         Clicked = click;
         isMine = mine;
         Test = tested;
+        JBut = place;
     }
     public void setTest(boolean set){
         Test = set;
@@ -39,6 +43,9 @@ public class Square {
     public int[] getXAndY(){
         int[] loc = {xLoc,yLoc};
         return loc;
+    }
+    public JButton getButton(){
+        return JBut;
     }
     public int[] info(){
         int[] info = {xLoc,yLoc,Touching};

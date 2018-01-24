@@ -12,17 +12,48 @@ public class main {
     static Scanner read = new Scanner(System.in);
     static boolean firstClick = true;
     private static JFrame frame;
-    private static final int HEIGHT = 600;
-    private static final int WIDTH = 600;
+    private static int boxSize = 50;
+    private static JPanel pane;
+    private static int buffer = 10;
+    private static final int HEIGHT = (boxSize + buffer) * SIZE;
+    private static final int WIDTH = (boxSize + buffer) * SIZE;
+    private static final FlowLayout flowLayout = new FlowLayout();
 
 
 
 
-    public static void initJFRAME(){
+    public static void initJFRAME(ArrayList<Square> squares){
         frame = new JFrame("MineSweepers");
+        pane = new JPanel();
+
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(WIDTH, HEIGHT);
+
+        pane.setLayout(flowLayout);
+        pane.setVisible(true);
+        pane.setBackground(Color.blue);
+
+        for (int i = 0; i <squares.size() ; i++) {
+
+            JButton temp = squares.get(i).getButton();
+            temp.setBackground(Color.gray);
+            temp.setPreferredSize(new Dimension(boxSize,boxSize));
+            int touch = squares.get(i).intTouching();
+            Square s = squares.get(i);
+            int[] cord = squares.get(i).getXAndY();
+            temp.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    String value = String.valueOf(touch);
+                    temp.setText(value);
+                    update(cord,squares);
+                }
+            });
+            pane.add(temp);
+
+        }
+        frame.add(pane);
+
 
 
 
@@ -97,7 +128,9 @@ public class main {
         ArrayList<Square> squares = new ArrayList<Square>();
         //String[] names = new String[SIZE*SIZE];
         for (int d = 0; d < SIZE*SIZE;d++) {
-            Square a = new Square(0,0,0, true,false,false,false);
+            JButton tempB = new JButton();
+            tempB.setBackground(Color.gray);
+            Square a = new Square(0,0,0, true,false,false,false, tempB);
             squares.add(a);
         }
 
@@ -149,6 +182,8 @@ public class main {
 
 
             clone.get(findIndex(cords,clone)).click();
+            JButton temp = clone.get(findIndex(cords,clone)).getButton();
+            temp.setText(String.valueOf(clone.get(findIndex(cords,clone)).intTouching()));
             squaresObj = clone;
             ArrayList<int[]> soourond = new ArrayList<>();
             soourond = getSurrounding(cords);
@@ -167,6 +202,8 @@ public class main {
 
             }else{
                 clone.get(findIndex(cords,clone)).click();
+                JButton temp = clone.get(findIndex(cords,clone)).getButton();
+                temp.setText(String.valueOf(clone.get(findIndex(cords,clone)).intTouching()));
             }
 
             return clone;
@@ -343,15 +380,15 @@ public class main {
         return obj;
     }
     public static void main(String args[]){
-        initJFRAME();
-        int[] test = {9,9};
-
         ArrayList<Square> squaresObj = createBoxes();
-        boolean won = false;
-
         ArrayList<int[]> mines = mineLoc();
         squaresObj = setMines(mines,squaresObj);
         squaresObj = setvalues(squaresObj);
+
+        initJFRAME(squaresObj);
+        boolean won = false;
+
+
 
         int[] cords;
         while(!won){

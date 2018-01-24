@@ -18,10 +18,16 @@
       <file leaf-file-name="main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state relative-caret-position="534">
+              <caret line="48" column="41" lean-forward="true" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#setMines#0;class#main#0" expanded="false" />
+                <element signature="method#mineLoc#0;class#main#0" expanded="false" />
+                <element signature="method#Draw#0;class#main#0" expanded="false" />
+                <element signature="method#createBoxes#0;class#main#0" expanded="false" />
+                <element signature="method#getMove#0;class#main#0" expanded="false" />
+                <element signature="method#WON#0;class#main#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -30,9 +36,12 @@
       <file leaf-file-name="Square.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Square.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="306">
+              <caret line="40" column="23" lean-forward="true" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
+              <folding>
+                <element signature="e#1026#1027#0" expanded="true" />
+                <element signature="e#1053#1054#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -62,8 +71,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="939" />
-    <option name="y" value="24" />
+    <option name="x" value="172" />
+    <option name="y" value="37" />
     <option name="width" value="1125" />
     <option name="height" value="810" />
   </component>
@@ -247,15 +256,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1516820295665</updated>
-      <workItem from="1516820297331" duration="871000" />
+      <workItem from="1516820297331" duration="4757000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="871000" />
+    <option name="totallyTimeSpent" value="4757000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="939" y="24" width="1125" height="810" extended-state="0" />
+    <frame x="172" y="37" width="1125" height="810" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -294,24 +303,35 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Square.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="306">
+          <caret line="40" column="23" lean-forward="true" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
+          <folding>
+            <element signature="e#1026#1027#0" expanded="true" />
+            <element signature="e#1053#1054#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="534">
+          <caret line="48" column="41" lean-forward="true" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#setMines#0;class#main#0" expanded="false" />
+            <element signature="method#mineLoc#0;class#main#0" expanded="false" />
+            <element signature="method#Draw#0;class#main#0" expanded="false" />
+            <element signature="method#createBoxes#0;class#main#0" expanded="false" />
+            <element signature="method#getMove#0;class#main#0" expanded="false" />
+            <element signature="method#WON#0;class#main#0" expanded="false" />
           </folding>
         </state>
       </provider>
