@@ -1,12 +1,32 @@
+import javax.swing.*;
+import java.awt.image.ImageObserver;
 import java.util.*;
-
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 public class main {
     final static int SIZE = 8;
     final static int BEGMIN = 5;
     static Random rand = new Random();
     static Scanner read = new Scanner(System.in);
     static boolean firstClick = true;
+    private static JFrame frame;
+    private static final int HEIGHT = 600;
+    private static final int WIDTH = 600;
 
+
+
+
+    public static void initJFRAME(){
+        frame = new JFrame("MineSweepers");
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(WIDTH, HEIGHT);
+
+
+
+    }
 
 
     public static ArrayList<Square> setMines(ArrayList<int[]> locs, ArrayList<Square> squaresObj){
@@ -323,6 +343,7 @@ public class main {
         return obj;
     }
     public static void main(String args[]){
+        initJFRAME();
         int[] test = {9,9};
 
         ArrayList<Square> squaresObj = createBoxes();

@@ -1,4 +1,5 @@
 public class Square {
+
     private int Touching;
     private int xLoc;
     private int yLoc;
@@ -6,6 +7,8 @@ public class Square {
     private boolean Clicked;
     private boolean isMine;
     private boolean Test;
+
+
     public Square(int MinesTouching, int xCord, int yCord, boolean hide,boolean click,boolean mine,boolean tested){
         Touching = MinesTouching;
         xLoc = xCord;
