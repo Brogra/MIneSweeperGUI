@@ -71,6 +71,15 @@ public class Square {
             Hidden = false;
 
     }
+    public String stringType(){
+        if(isMine){
+            return "+";
+
+        }else{
+            return String.valueOf(intTouching());
+        }
+
+    }
     public void updateTouch(int value){
         Touching = value;
     }
